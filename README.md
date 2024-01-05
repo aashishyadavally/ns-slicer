@@ -51,6 +51,7 @@ See [link](https://github.com/aashishyadavally/ns-slicer/tree/main/src/README.md
 ## Contributing Guidelines
 There are no specific guidelines for contributing, apart from a few general guidelines we tried to follow, such as:
 * Code should follow PEP8 standards as closely as possible
+* Code should carry appropriate comments, wherever necessary, and follow the docstring convention in the repository.
 
 If you see something that could be improved, send a pull request! 
 We are always happy to look at improvements, to ensure that `ns-slicer`, as a project, is the best version of itself. 
