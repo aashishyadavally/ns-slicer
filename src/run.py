@@ -128,26 +128,24 @@ def predict(dataloader, model, args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
-    ## Required parameters
-    parser.add_argument("--data_dir", default='../data', type=str,
-                        help="Path to datasets directory.")
+    ## Required arguments
+    parser.add_argument("--data_dir", required=True, type=str, help="Path to datasets directory.")
+    parser.add_argument("--output_dir", required=True, type=str, help="Path to save model outputs.")
+
+    ## Experiment arguments
     parser.add_argument("--model_key", default='microsoft/graphcodebert-base',
                         type=str, help="Model string.",
                         choices=['microsoft/codebert-base', 'microsoft/graphcodebert-base', 'roberta-base'])
-    parser.add_argument("--output_dir", default='../outputs',
-                        type=str, help="Dataset type string.")
-
-    ## Model parameters
-    parser.add_argument("--max_tokens", default=512, type=int,
-                        help="Maximum number of tokens in a code example.")
+    parser.add_argument("--pretrain", action='store_true',
+                        help='Use xBERT model off-the-shelf')
+    parser.add_argument("--save_predictions", action='store_true',
+                        help='Cache model predictions during evaluation.')
     parser.add_argument("--use_statement_ids", action='store_true',
                         help="Use statement ids in input embeddings")
     parser.add_argument("--pooling_strategy", default='mean',
                         type=str, choices=['mean', 'max'], help="Pooling strategy.")
     parser.add_argument("--pct", default=0.15, type=float,
                         help="Percentage of code to strip to simulate partial code.")
-
-    ## Experiment arguments
     parser.add_argument("--load_model_path", default=None, type=str,
                         help="Path to trained model: Should contain the .bin files")
     parser.add_argument("--do_train", action='store_true',
@@ -160,10 +158,10 @@ if __name__ == '__main__':
                         help="Whether to run variable aliasing on dev set.")
     parser.add_argument("--do_predict", action='store_true',
                         help="Whether to predict on given dataset.")
-    parser.add_argument("--pretrain", action='store_true',
-                        help='Use xBERT model off-the-shelf')
-    parser.add_argument("--save_predictions", action='store_true',
-                        help='Cache model predictions during evaluation.')
+ 
+    ## Optional arguments
+    parser.add_argument("--max_tokens", default=512, type=int,
+                        help="Maximum number of tokens in a code example.")
     parser.add_argument("--train_batch_size", default=64, type=int,
                         help="Batch size per GPU/CPU for training.")
     parser.add_argument("--eval_batch_size", default=64, type=int,
