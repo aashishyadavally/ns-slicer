@@ -38,7 +38,7 @@ Navigate to ``ns-slicer/models/`` to find the trained model weights with CodeBER
 Navigate to ``ns-slicer/src/`` to find the source code for running experiments/using NS-Slicer to predict backward and forward static slices for a Java program.
 
 ### Usage
-See [link](https://github.com/aashishyadavally/ns-slicer/tree/main/src/README.md) for more details.
+See [link](https://github.com/aashishyadavally/ns-slicer/tree/main/src/README.md) for details about replicating results in the paper, as well as using ``NS-Slicer`` to predict static program slices for Java programs.
 
 ## Contributing Guidelines
 There are no specific guidelines for contributing, apart from a few general guidelines we tried to follow, such as:
@@ -50,4 +50,4 @@ We are always happy to look at improvements, to ensure that `ns-slicer`, as a pr
 If you think something should be done differently (or is just-plain-broken), please create an issue.
 
 ## License
-See the [LICENSE](https://github.com/aashishyadavally/storyteller/blob/master/LICENSE) file for more details.
+See the [LICENSE](https://github.com/aashishyadavally/ns-slicer/tree/main/LICENSE) file for more details.
