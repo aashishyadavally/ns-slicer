@@ -1,10 +1,10 @@
 # ``NS-Slicer``: A Learning-Based Approach to Static Program Slicing
 Replication package for our paper, conditionally accepted at OOPSLA'24.
 
-## Contents
+## Table of Contents
 
 * [Getting Started](#getting-started)
-  - [Setup](setup)
+  - [Setup](#setup)
     - [Hardware Requirements](#hardware-requirements)
     - [Project Environment](#project-environment)
   - [Directory Structure](#directory-structure)
