@@ -32,7 +32,10 @@ Currently, ``NS-Slicer`` works flawlessly on Linux, and can be set up easily wit
 Navigate to ``ns-slicer/data/`` to find the dataset files (``{train|val|test}-examples.json``) -- use these files to benchmark learning-based static slicing approaches, or replicate results from the paper.
 
 #### 3. Model Artifacts
-Navigate to ``ns-slicer/models/`` to find the trained model weights with CodeBERT and GraphCodeBERT pre-trained language models -- use these files to replicate results from the paper, or to produce static program slices.
+Navigate to ``ns-slicer/models/`` to find the trained model weights with CodeBERT and GraphCodeBERT pre-trained language models -- use these files to replicate results from the paper, or to produce static program slices for custom Java programs.
+
+#### 4. Code
+Navigate to ``ns-slicer/src/`` to find the source code for running experiments/using NS-Slicer to predict backward and forward static slices for a Java program.
 
 ### Usage
 See [link](https://github.com/aashishyadavally/ns-slicer/tree/main/src/README.md) for more details.
