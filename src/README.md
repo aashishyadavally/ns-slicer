@@ -6,6 +6,7 @@
 * [Usage Instructions](#usage-instructions)
   - [For Experiments Replication](#for-experiments-replication)
   - [For Custom Dataset](#for-custom-dataset)
+  - [For Adding Pre-Trained Language Models](#for-adding-pre-trained-language-models)
 
 ### Configuration
 
@@ -162,3 +163,16 @@ Follow these instructions:
        ```
 
 #### For Custom Dataset
+To predict static backward and forward slices for a custom dataset, follow these instructions:
+
+1. First, create a JSON file with entries similar to ``{train|val|test}-examples.json`` and place in ``ns-slicer/data`` directory.
+2. Next, create a data structure (e.g., ``XInputExample``) similar to the ``InputExample`` object in ``ns-slicer/src/process.py`` to save the input examples.
+3. Create an ``XDataProcessor`` object subclassing the ``BaseDataProcessor`` object in ``ns-slicer/src/process.py`` to process and cache list of input examples (see ``process.VulDetectDataProcessor`` for illustration).
+4. Create an ``torch.utils.data.DataLoader`` object by adding a ``make_dataloader_x`` function in ``ns-slicer/src/load.py`` (see ``process.make_dataloader_vuldetect`` for illustration).
+5. Replace ``VulDetectDataProcessor`` with ``XDataProcessor``, and ``make_dataloader_vuldetect`` with ``make_dataloader_x`` under the ``if args.do_predict:`` construct in ``ns-slicer/src/run.py``.
+
+#### For Adding Pre-Trained Language Models
+To plug other pre-trained language models into NS-Slicer framework:
+
+1. Currently, the only allowed choices for ``model_key`` program argument in ``ns-slicer/src/run.py`` are ``microsoft/codebert-base``, ``microsoft/graphcodebert-base``, and ``roberta-base``. Expand this list with additional pre-trained language models.
+2. Replace ``model_key`` value with new pre-trained language model key in the corresponding run command (as described above).
