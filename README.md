@@ -6,8 +6,11 @@ This section describes the preqrequisites, and contains instructions, to get the
 
 ### Setup 
 
-#### 1. Project Environment
-Currently, ``NS-Slicer`` works flawlessly on Linux, and can be set up easily with all the prerequisite packages by following these instructions:
+#### A. Hardware Requirements
+``NS-Slicer`` requires a GPU to run *fast* and produce the results. On machines without a GPU, note that it can be notoriously slow.
+
+#### B. Project Environment
+Currently, ``NS-Slicer`` works well on Ubuntu OS, and can be set up easily with all the prerequisite packages by following these instructions (skip steps 1 - 3 if ``conda`` is already installed):
   1. Download appropriate version of [conda](https://repo.anaconda.com/miniconda/) for your machine.
   2. Install  it by running the `conda_install.sh` file, with the command:
      ```bash
@@ -28,14 +31,19 @@ Currently, ``NS-Slicer`` works flawlessly on Linux, and can be set up easily wit
      $ conda activate autoslicer
      ```
 
-#### 2. Data Artifacts
+### Directory Structure
+
+#### 1. Data Artifacts
 Navigate to ``ns-slicer/data/`` to find the dataset files (``{train|val|test}-examples.json``) -- use these files to benchmark learning-based static slicing approaches, or replicate results from the paper.
 
-#### 3. Model Artifacts
+#### 2. Model Artifacts
 Navigate to ``ns-slicer/models/`` to find the trained model weights with CodeBERT and GraphCodeBERT pre-trained language models -- use these files to replicate results from the paper, or to produce static program slices for custom Java programs.
 
-#### 4. Code
+#### 3. Code
 Navigate to ``ns-slicer/src/`` to find the source code for running experiments/using NS-Slicer to predict backward and forward static slices for a Java program.
+
+#### 4. Preliminary Study
+Navigate to ``ns-slicer/empirical-study/`` to find the details from the preliminary empirical study (see Section 3) in the paper.
 
 ### Usage
 See [link](https://github.com/aashishyadavally/ns-slicer/tree/main/src/README.md) for details about replicating results in the paper, as well as using ``NS-Slicer`` to predict static program slices for Java programs.
