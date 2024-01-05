@@ -1,15 +1,25 @@
 # ``NS-Slicer``: A Learning-Based Approach to Static Program Slicing
 Replication package for our paper, conditionally accepted at OOPSLA'24.
 
+## Contents
+
+* [Getting Started](#getting-started)
+  - [Hardware Requirements](#hardware-requirements)
+  - [Project Environment](#project-environment)
+* [Directory Structure](#directory-structure)
+* [Usage](#usage)
+* [Contributing Guidelines](#contributing-guidelines)
+* [License](#license)
+
 ## Getting Started
 This section describes the preqrequisites, and contains instructions, to get the project up and running.
 
 ### Setup 
 
-#### A. Hardware Requirements
+#### Hardware Requirements
 ``NS-Slicer`` requires a GPU to run *fast* and produce the results. On machines without a GPU, note that it can be notoriously slow.
 
-#### B. Project Environment
+#### Project Environment
 Currently, ``NS-Slicer`` works well on Ubuntu OS, and can be set up easily with all the prerequisite packages by following these instructions (skip steps 1 - 3 if ``conda`` is already installed):
   1. Download appropriate version of [conda](https://repo.anaconda.com/miniconda/) for your machine.
   2. Install  it by running the `conda_install.sh` file, with the command:
