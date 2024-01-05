@@ -4,10 +4,11 @@ Replication package for our paper, conditionally accepted at OOPSLA'24.
 ## Contents
 
 * [Getting Started](#getting-started)
-  - [Hardware Requirements](#hardware-requirements)
-  - [Project Environment](#project-environment)
-* [Directory Structure](#directory-structure)
-* [Usage](#usage)
+  - [Setup](setup)
+    - [Hardware Requirements](#hardware-requirements)
+    - [Project Environment](#project-environment)
+  - [Directory Structure](#directory-structure)
+  - [Usage](#usage)
 * [Contributing Guidelines](#contributing-guidelines)
 * [License](#license)
 
