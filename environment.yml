@@ -1,0 +1,23 @@
+name: autoslicer
+
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+  - pytorch
+
+dependencies:
+  # Core stack
+  - python
+  - pytorch-gpu
+
+  # Visualization stack
+  - matplotlib
+  - jupyter
+
+  - pip
+  - pip:
+     - tqdm
+     - transformers
+     - scikit-learn
+     - numpy
