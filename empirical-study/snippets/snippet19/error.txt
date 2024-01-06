@@ -1,0 +1,2 @@
+Could not find type member. type=POINTFLOAT, member=y
+Could not find type member. type=POINTFLOAT, member=x

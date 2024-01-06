@@ -1,0 +1,18 @@
+HRESULT CoCreateDiaDataSource(CComPtr<IDiaDataSource>& data_source)
+{
+    HMODULE hmodule = LoadLibrary("MSDIA100");
+    if (!hmodule)
+        return HRESULT_FROM_WIN32(GetLastError());
+    BOOL (WINAPI*DllGetClassObject)(REFCLSID,REFIID,LPVOID) =
+        (BOOL(WINAPI*)(REFCLSID,REFIID,LPVOID))GetProcAddress(hmodule, "DllGetClassObject");
+	if (!DllGetClassObject) 
+		return HRESULT_FROM_WIN32(GetLastError());
+	CComPtr<IClassFactory> pClassFactory;
+	HRESULT hr = DllGetClassObject(CLSID_DiaSource, IID_IClassFactory, &pClassFactory);
+	if (FAILED(hr))
+		return hr;
+	hr = pClassFactory->CreateInstance(NULL, IID_IDiaDataSource, (void**)&data_source);
+	if (FAILED(hr))
+		return hr;
+    return S_OK;
+}

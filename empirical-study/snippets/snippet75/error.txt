@@ -1,0 +1,2 @@
+Could not find type member. type=A &, member=field2_
+Could not find type member. type=A &, member=field1_

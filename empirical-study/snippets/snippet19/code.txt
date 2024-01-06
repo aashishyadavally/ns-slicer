@@ -1,0 +1,23 @@
+int CGlEngineFunctions::GetAngleABC( POINTFLOAT a, POINTFLOAT b, POINTFLOAT c )
+{
+	POINTFLOAT ab = { b.x - a.x, b.y - a.y };
+	POINTFLOAT cb = { b.x - c.x, b.y - c.y };
+	float dot = (ab.x * cb.x + ab.y * cb.y);
+	float abSqr = ab.x * ab.x + ab.y * ab.y;
+	float cbSqr = cb.x * cb.x + cb.y * cb.y;
+	float cosSqr = dot * dot / abSqr / cbSqr;
+	float cos2 = 2 * cosSqr - 1;
+	const float pi = 3.141592f;
+	float alpha2 =
+		(cos2 <= -1) ? 0 :
+		(cos2 >= 1) ? pi :
+		acosf(cos2);
+	float rslt = alpha2 / 2;
+	float rs = rslt * 180. / pi;
+	if (dot < 0)
+		rs = 180 - rs;
+	float det = (ab.x * cb.y - ab.y * cb.y);
+	if (det < 0)
+		rs = -rs;
+	return (int) floor(rs + 0.5);
+}

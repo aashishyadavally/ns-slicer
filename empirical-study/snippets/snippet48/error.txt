@@ -1,0 +1,2 @@
+Could not find type member. type=const std :: pair < A , B > &, member=first
+Could not find type member. type=const std :: pair < A , B > &, member=second

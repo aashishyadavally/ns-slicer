@@ -1,0 +1,5 @@
+Could not find type member. type=ANY, member=ai_addr
+Could not find type member. type=ANY, member=ai_family
+Could not find type member. type=ANY, member=sin6_addr
+Could not find type member. type=ANY, member=sin_addr
+Could not find type member. type=ANY, member=sa_family

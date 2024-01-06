@@ -1,0 +1,9 @@
+template<typename T>
+static T get_from_vector(const std::vector<uint8_t>& vec, const size_t current_index){
+	T result;
+	uint8_t *ptr = (uint8_t *) &result;
+	size_t idx = current_index + sizeof(T);
+	while(idx > current_index)
+		*ptr++ = vec[--idx];
+	return result;
+}

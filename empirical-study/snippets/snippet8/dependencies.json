@@ -1,0 +1,140 @@
+{
+    "cfg_edges": [
+        {
+            "node_out": "12",
+            "node_in": "13"
+        },
+        {
+            "node_out": "12",
+            "node_in": "15"
+        },
+        {
+            "node_out": "10",
+            "node_in": "11"
+        },
+        {
+            "node_out": "10",
+            "node_in": "12"
+        },
+        {
+            "node_out": "9",
+            "node_in": "10"
+        },
+        {
+            "node_out": "8",
+            "node_in": "9"
+        },
+        {
+            "node_out": "7",
+            "node_in": "8"
+        },
+        {
+            "node_out": "6",
+            "node_in": "7"
+        },
+        {
+            "node_out": "5",
+            "node_in": "6"
+        },
+        {
+            "node_out": "2",
+            "node_in": "5"
+        },
+        {
+            "node_out": "1",
+            "node_in": "2"
+        }
+    ],
+    "pdg_edges": [
+        {
+            "node_out": "13",
+            "node_in": "15",
+            "edge_type": "data_dependency"
+        },
+        {
+            "node_out": "12",
+            "node_in": "13",
+            "edge_type": "control_dependency"
+        },
+        {
+            "node_out": "12",
+            "node_in": "15",
+            "edge_type": "control_dependency"
+        },
+        {
+            "node_out": "10",
+            "node_in": "11",
+            "edge_type": "control_dependency"
+        },
+        {
+            "node_out": "10",
+            "node_in": "12",
+            "edge_type": "control_dependency"
+        },
+        {
+            "node_out": "8",
+            "node_in": "10",
+            "edge_type": "data_dependency"
+        },
+        {
+            "node_out": "8",
+            "node_in": "12",
+            "edge_type": "data_dependency"
+        },
+        {
+            "node_out": "8",
+            "node_in": "13",
+            "edge_type": "data_dependency"
+        },
+        {
+            "node_out": "5",
+            "node_in": "6",
+            "edge_type": "control_dependency"
+        },
+        {
+            "node_out": "5",
+            "node_in": "7",
+            "edge_type": "control_dependency"
+        },
+        {
+            "node_out": "5",
+            "node_in": "8",
+            "edge_type": "control_dependency"
+        },
+        {
+            "node_out": "5",
+            "node_in": "9",
+            "edge_type": "control_dependency"
+        },
+        {
+            "node_out": "5",
+            "node_in": "10",
+            "edge_type": "control_dependency"
+        },
+        {
+            "node_out": "2",
+            "node_in": "10",
+            "edge_type": "data_dependency"
+        },
+        {
+            "node_out": "2",
+            "node_in": "6",
+            "edge_type": "data_dependency"
+        },
+        {
+            "node_out": "2",
+            "node_in": "8",
+            "edge_type": "data_dependency"
+        },
+        {
+            "node_out": "2",
+            "node_in": "15",
+            "edge_type": "data_dependency"
+        },
+        {
+            "node_out": "1",
+            "node_in": "7",
+            "edge_type": "data_dependency"
+        }
+    ]
+}

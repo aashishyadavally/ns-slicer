@@ -1,0 +1,8 @@
+void *get_in_addr(struct sockaddr *sa)
+{
+    if (sa->sa_family == AF_INET)
+        return &(((struct sockaddr_in*)sa)->sin_addr);
+    return &(((struct sockaddr_in6*)sa)->sin6_addr);
+}
+char s[INET6_ADDRSTRLEN];
+inet_ntop(p->ai_family, get_in_addr((struct sockaddr *)p->ai_addr), s, sizeof s);

@@ -1,0 +1,3 @@
+Could not find type member. type=handle_data &, member=window_handle
+Could not find type member. type=handle_data &, member=process_id
+Could not find type member. type=handle_data, member=best_handle

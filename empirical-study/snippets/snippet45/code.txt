@@ -1,0 +1,8 @@
+#include <string>
+#include <sstream>
+bool isFloat( string myString ) {
+    std::istringstream iss(myString);
+    float f;
+    iss >> f;
+    return iss.eof() && !iss.fail(); 
+}

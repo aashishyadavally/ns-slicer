@@ -1,0 +1,15 @@
+struct Base
+{
+private:
+ virtual Base* doClone() const { ... }
+public:
+ shared_ptr<Base> Clone() const { return shared_ptr<Base>(doClone()); }
+ virtual ~Base(){}
+};
+struct Derived : Base
+{
+private:
+ virtual Derived* doClone() const { ... }
+public:
+ shared_ptr<Derived> Clone() const { return shared_ptr<Derived>(doClone()); }
+};

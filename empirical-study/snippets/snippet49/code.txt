@@ -1,0 +1,9 @@
+template<class Iter, class T>
+Iter binary_find(Iter begin, Iter end, T val)
+{
+    Iter i = std::lower_bound(begin, end, val);
+    if (i != end && *i == val)
+        return i;
+    else
+        return end;
+}

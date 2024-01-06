@@ -1,0 +1,38 @@
+Start of enhancement: io.shiftleft.semanticcpg.passes.languagespecific.fuzzyc.TypeDeclStubCreator
+End of enhancement: io.shiftleft.semanticcpg.passes.languagespecific.fuzzyc.TypeDeclStubCreator, after 34ms
+Start of enhancement: io.shiftleft.semanticcpg.passes.languagespecific.fuzzyc.MethodStubCreator
+End of enhancement: io.shiftleft.semanticcpg.passes.languagespecific.fuzzyc.MethodStubCreator, after 80ms
+Start of enhancement: io.shiftleft.semanticcpg.passes.methoddecorations.MethodDecoratorPass
+End of enhancement: io.shiftleft.semanticcpg.passes.methoddecorations.MethodDecoratorPass, after 9ms
+Start of enhancement: io.shiftleft.semanticcpg.passes.linking.capturinglinker.CapturingLinker
+End of enhancement: io.shiftleft.semanticcpg.passes.linking.capturinglinker.CapturingLinker, after 3ms
+Start of enhancement: io.shiftleft.semanticcpg.passes.linking.linker.Linker
+End of enhancement: io.shiftleft.semanticcpg.passes.linking.linker.Linker, after 56ms
+Start of enhancement: io.shiftleft.semanticcpg.passes.compat.bindingtablecompat.BindingTableCompat
+End of enhancement: io.shiftleft.semanticcpg.passes.compat.bindingtablecompat.BindingTableCompat, after 11ms
+Start of enhancement: io.shiftleft.semanticcpg.passes.BindingMethodOverridesPass
+End of enhancement: io.shiftleft.semanticcpg.passes.BindingMethodOverridesPass, after 5ms
+Start of enhancement: io.shiftleft.semanticcpg.passes.linking.calllinker.CallLinker
+End of enhancement: io.shiftleft.semanticcpg.passes.linking.calllinker.CallLinker, after 3ms
+Start of enhancement: io.shiftleft.semanticcpg.passes.linking.memberaccesslinker.MemberAccessLinker
+Could not find type member. type=rgb, member=b
+Could not find type member. type=rgb, member=g
+Could not find type member. type=hsv, member=v
+Could not find type member. type=rgb, member=r
+Could not find type member. type=hsv, member=s
+Could not find type member. type=hsv, member=h
+End of enhancement: io.shiftleft.semanticcpg.passes.linking.memberaccesslinker.MemberAccessLinker, after 19ms
+Start of enhancement: io.shiftleft.semanticcpg.passes.methodexternaldecorator.MethodExternalDecoratorPass
+End of enhancement: io.shiftleft.semanticcpg.passes.methodexternaldecorator.MethodExternalDecoratorPass, after 1ms
+Start of enhancement: io.shiftleft.semanticcpg.passes.containsedges.ContainsEdgePass
+End of enhancement: io.shiftleft.semanticcpg.passes.containsedges.ContainsEdgePass, after 23ms
+Start of enhancement: io.shiftleft.semanticcpg.passes.namespacecreator.NamespaceCreator
+End of enhancement: io.shiftleft.semanticcpg.passes.namespacecreator.NamespaceCreator, after 5ms
+Start of enhancement: io.shiftleft.semanticcpg.passes.cfgdominator.CfgDominatorPass
+End of enhancement: io.shiftleft.semanticcpg.passes.cfgdominator.CfgDominatorPass, after 39ms
+Start of enhancement: io.shiftleft.semanticcpg.passes.codepencegraph.CdgPass
+End of enhancement: io.shiftleft.semanticcpg.passes.codepencegraph.CdgPass, after 18ms
+Start of enhancement: io.shiftleft.dataflowengine.passes.propagateedges.PropagateEdgePass
+End of enhancement: io.shiftleft.dataflowengine.passes.propagateedges.PropagateEdgePass, after 6ms
+Start of enhancement: io.shiftleft.dataflowengine.passes.reachingdef.ReachingDefPass
+End of enhancement: io.shiftleft.dataflowengine.passes.reachingdef.ReachingDefPass, after 39ms

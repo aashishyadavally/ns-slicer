@@ -1,0 +1,21 @@
+std::istream& safeGetline(std::istream& is, std::string& t)
+{
+    t.clear();
+    std::istream::sentry se(is);
+    std::streambuf* sb = is.rdbuf();
+    for(;;) {
+        int c = sb->sbumpc();
+        switch (c) {
+        case '\r':
+            c = sb->sgetc();
+            if(c == '\n')
+                sb->sbumpc();
+            return is;
+        case '\n':
+        case EOF:
+            return is;
+        default:
+            t += (char)c;
+        }
+    }
+}

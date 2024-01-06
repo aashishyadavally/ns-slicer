@@ -1,0 +1,33 @@
+{
+    "cfg_edges": [
+        {
+            "node_out": "3",
+            "node_in": "4"
+        },
+        {
+            "node_out": "2",
+            "node_in": "3"
+        },
+        {
+            "node_out": "1",
+            "node_in": "2"
+        }
+    ],
+    "pdg_edges": [
+        {
+            "node_out": "3",
+            "node_in": "4",
+            "edge_type": "control_dependency"
+        },
+        {
+            "node_out": "2",
+            "node_in": "4",
+            "edge_type": "data_dependency"
+        },
+        {
+            "node_out": "2",
+            "node_in": "3",
+            "edge_type": "data_dependency"
+        }
+    ]
+}

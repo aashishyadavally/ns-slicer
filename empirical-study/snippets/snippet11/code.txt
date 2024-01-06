@@ -1,0 +1,17 @@
+class my_dirty_little_secret {
+  my_dirty_little_secret(const std::string& str)
+  {
+  }
+  int x;
+  std::string y;
+  float z;
+};
+class the_class : private my_dirty_little_secret
+                , public the_other_base_class {
+  public:
+    the_class(const std::string str)
+      : my_dirty_little_secret(str)
+      , the_other_base_class(x, y, z)
+    {
+    }
+};

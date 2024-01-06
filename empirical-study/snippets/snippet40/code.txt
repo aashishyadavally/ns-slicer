@@ -1,0 +1,17 @@
+std::string
+Strutil::vformat (const char *fmt, va_list ap)
+{
+    size_t size = 1024;
+    char stackbuf[1024];
+    std::vector<char> dynamicbuf;
+    char *buf = &stackbuf[0];
+    while (1) {
+        int needed = vsnprintf (buf, size, fmt, ap);
+        if (needed <= (int)size && needed >= 0) {
+            return std::string (buf, (size_t) needed);
+        }
+        size = (needed > 0) ? (needed+1) : (size*2);
+        dynamicbuf.resize (size);
+        buf = &dynamicbuf[0];
+    }
+}

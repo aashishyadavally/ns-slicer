@@ -1,0 +1,8 @@
+method(){
+float slidePressure;
+memcpy(&slidePressure, bufferSlidePressure, sizeof(float));
+bool isSlidePressure;
+memcpy(&isSlidePressure, bufferSlidePressure, sizeof(bool));
+char * slidePressure = new char[ size ]; // or a stack buffer 
+memcpy(slidePressure, (const char*)bufferSlidePressure, size );
+}

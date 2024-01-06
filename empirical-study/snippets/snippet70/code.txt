@@ -1,0 +1,11 @@
+#include<algorithm>
+string tolower(string s) {
+	std::transform(s.begin(), s.end(), s.begin(), ::tolower );
+	return s;
+}
+struct comp { 
+    bool operator() (const std::string& lhs, const std::string& rhs) const {
+        return  tolower(lhs) < tolower(rhs);
+    }
+};
+std::map<std::string, int, comp> st;

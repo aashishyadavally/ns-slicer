@@ -1,0 +1,15 @@
+std::string old_x = x;
+std::string old_x = x.c_str();
+std::vector<char> old_x(x.data(), x.size());
+std::vector<char> old_x(x.c_str(), x.size() + 1);
+char y[N + 1];
+strcpy(y, x.c_str());
+char* y = alloca(x.size() + 1);
+strcpy(y, x.c_str());
+char y[x.size() + 1];
+strcpy(y, x.c_str());
+char* y = new char[x.size() + 1];
+strcpy(y, x.c_str());
+delete[] y;
+char* y = strdup(x.c_str());
+free(y);

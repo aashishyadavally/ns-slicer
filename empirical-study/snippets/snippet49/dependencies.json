@@ -1,0 +1,57 @@
+{
+    "cfg_edges": [
+        {
+            "node_out": "5",
+            "node_in": "6"
+        },
+        {
+            "node_out": "5",
+            "node_in": "8"
+        },
+        {
+            "node_out": "4",
+            "node_in": "5"
+        },
+        {
+            "node_out": "1",
+            "node_in": "4"
+        }
+    ],
+    "pdg_edges": [
+        {
+            "node_out": "5",
+            "node_in": "8",
+            "edge_type": "control_dependency"
+        },
+        {
+            "node_out": "5",
+            "node_in": "6",
+            "edge_type": "control_dependency"
+        },
+        {
+            "node_out": "4",
+            "node_in": "5",
+            "edge_type": "data_dependency"
+        },
+        {
+            "node_out": "4",
+            "node_in": "6",
+            "edge_type": "data_dependency"
+        },
+        {
+            "node_out": "2",
+            "node_in": "4",
+            "edge_type": "data_dependency"
+        },
+        {
+            "node_out": "2",
+            "node_in": "5",
+            "edge_type": "data_dependency"
+        },
+        {
+            "node_out": "2",
+            "node_in": "8",
+            "edge_type": "data_dependency"
+        }
+    ]
+}

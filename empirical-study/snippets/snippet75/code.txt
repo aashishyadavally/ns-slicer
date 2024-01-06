@@ -1,0 +1,9 @@
+friend void swap(A& x, A& y)
+{
+    WriteLock lhs_lk(x.mut_, std::defer_lock);
+    WriteLock rhs_lk(y.mut_, std::defer_lock);
+    std::lock(lhs_lk, rhs_lk);
+    using std::swap;
+    swap(x.field1_, y.field1_);
+    swap(x.field2_, y.field2_);
+}

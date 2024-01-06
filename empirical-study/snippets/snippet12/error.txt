@@ -1,0 +1,6 @@
+Could not find type member. type=rgb, member=b
+Could not find type member. type=rgb, member=g
+Could not find type member. type=hsv, member=v
+Could not find type member. type=rgb, member=r
+Could not find type member. type=hsv, member=s
+Could not find type member. type=hsv, member=h

@@ -1,0 +1,11 @@
+string subTag(string s,string a,string b){
+ std::string lower_s;
+ std::transform(s.begin(), s.end(), lower_s.begin(), ::tolower);
+ std::transform(a.begin(), a.end(), a.begin(), ::tolower);
+ auto position=lower_s.find(a);
+ while(position!=std::string:npos){
+      s.replace(position, a.size(), b);
+      position=lower_s.find(a);
+ }
+ return s;
+}

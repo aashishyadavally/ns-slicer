@@ -1,0 +1,3 @@
+Could not find type member. type=cv :: Mat, member=at
+Could not find type member. type=cv :: Mat, member=cols
+Could not find type member. type=cv :: Mat, member=rows
