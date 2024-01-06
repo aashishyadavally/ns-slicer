@@ -1,6 +1,8 @@
 # ``NS-Slicer``: A Learning-Based Approach to Static Program Slicing
 Replication package for our paper, conditionally accepted at OOPSLA'24.
 
+Permanent archive also available at [Zenodo](https://zenodo.org/records/10463878).
+
 ## Table of Contents
 
 * [Getting Started](#getting-started)
