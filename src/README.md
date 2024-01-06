@@ -56,7 +56,7 @@ Follow these instructions:
 
 #### For Experiments Replication
 
-1. For intrinsic evaluation on complete code
+1. For intrinsic evaluation on complete code (see Section 6.1 in paper)
    * NS-Slicer with CodeBERT (*off-the-shelf*)
      - Training:
        ```bash
@@ -97,7 +97,7 @@ Follow these instructions:
        python run.py --data_dir ../data --output_dir ../models/graphcodebert-ft --load_model_path ../models/graphcodebert-ft/Epoch_4/model.ckpt --model_key microsoft/graphcodebert-base --do_eval
        ```
    
-3. For intrinsic evaluation on partial code (NS-Slicer with GraphCodeBERT)
+2. For intrinsic evaluation on partial code (NS-Slicer with GraphCodeBERT, see Section 6.2 in paper)
    * Omitting 5% of the statements at both start and end
        ```bash
        python run.py --data_dir ../data --output_dir ../models/graphcodebert-ft --load_model_path ../models/graphcodebert-ft/Epoch_4/model.ckpt --model_key microsoft/graphcodebert-base --do_eval_partial --pct 0.05
@@ -111,7 +111,7 @@ Follow these instructions:
        python run.py --data_dir ../data --output_dir ../models/graphcodebert-ft --load_model_path ../models/graphcodebert-ft/Epoch_4/model.ckpt --model_key microsoft/graphcodebert-base --do_eval_partial --pct 0.15
        ```
   
-4. Ablation study
+3. Ablation study (see Section 6.3 in paper)
    * NS-Slicer, *w/o* source code pre-training
       - Training:
        ```bash
@@ -142,7 +142,7 @@ Follow these instructions:
        python run.py --data_dir ../data --output_dir ../models/graphcodebert-max --load_model_path ../models/graphcodebert-max/Epoch_4/model.ckpt --model_key microsoft/graphcodebert-base --do_eval
        ```
 
-5. Variable aliasing
+4. Variable aliasing (see Section 6.4 in paper)
    * NS-Slicer with CodeBERT
       ```bash
        python run.py --data_dir ../data --output_dir ../models/codebert-ft --load_model_path ../models/codebert-ft/Epoch_4/model.ckpt --model_key microsoft/codebert-base --do_eval_aliasing
@@ -152,7 +152,7 @@ Follow these instructions:
        python run.py --data_dir ../data --output_dir ../models/graphcodebert-ft --load_model_path ../models/graphcodebert-ft/Epoch_4/model.ckpt --model_key microsoft/graphcodebert-base --do_eval_aliasing
        ```
 
-6. For extrsinsic evaluation (i.e., vulnerability detection)
+5. For extrsinsic evaluation (i.e., vulnerability detection, see Section 6.5 in paper)
    * NS-Slicer with GraphCodeBERT (*off-the-shelf*)
        ```bash
        python run.py --data_dir ../data --output_dir ../models/graphcodebert-pt --load_model_path ../models/graphcodebert-pt/Epoch_4/model.ckpt --model_key microsoft/graphcodebert-base --do_predict
