@@ -546,7 +546,7 @@ class AliasingDataProcessor(BaseDataProcessor):
 class VulDetectDataProcessor:
     '''Processes code examples in vulnerability detection dataset.
     '''
-    def __init__(self, data_dir='../dataset'):
+    def __init__(self, data_dir='../data'):
         '''Initializes data processor for complete code examples.
 
         Arguments:
