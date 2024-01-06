@@ -13,7 +13,7 @@ models/codebert_ft/
 models/graphcodebert_ft/
 
 # IDE
-*.DS_Store
+**/.DS_Store
 
 # Distribution / packaging
 .Python
