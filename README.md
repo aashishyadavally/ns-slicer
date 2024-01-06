@@ -8,7 +8,7 @@ Replication package for our paper, conditionally accepted at OOPSLA'24.
     - [Hardware Requirements](#hardware-requirements)
     - [Project Environment](#project-environment)
   - [Directory Structure](#directory-structure)
-  - [Usage](#usage)
+  - [Usage Guide](#usage-guide)
 * [Contributing Guidelines](#contributing-guidelines)
 * [License](#license)
 
@@ -59,7 +59,7 @@ Navigate to ``ns-slicer/src/`` to find the source code for running experiments/u
 #### 4. Preliminary Study
 Navigate to ``ns-slicer/empirical-study/`` to find the details from the preliminary empirical study (see Section 3) in the paper.
 
-### Usage
+### Usage Guide
 See [link](https://github.com/aashishyadavally/ns-slicer/tree/main/src/README.md) for details about replicating results in the paper, as well as using ``NS-Slicer`` to predict static program slices for Java programs.
 
 ## Contributing Guidelines
