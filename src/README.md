@@ -139,7 +139,7 @@ Follow these instructions:
        ```
       - Inference:
        ```bash
-       python run.py --data_dir ../data --output_dir ../models/graphcodebert-max --load_model_path ../models/graphcodebert-max/Epoch_4/model.ckpt --model_key microsoft/graphcodebert-base --pooling_strategy max --do_eval
+       python run.py --data_dir ../data --output_dir ../models/graphcodebert-max --load_model_path ../models/graphcodebert-max/Epoch_4/model.ckpt --model_key microsoft/graphcodebert-base --do_eval
        ```
 
 5. Variable aliasing
