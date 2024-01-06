@@ -379,7 +379,8 @@ if __name__ == '__main__':
                 'label': ex.label,
             })
 
-        with open('../dataset/filtered_methods_with_predictions.json', 'w') as f:
+        path_to_write = Path(args.data_dir) / f'filtered_methods_with_predictions.json'
+        with open(str(path_to_write), 'w') as f:
             json.dump(examples_with_predictions, f, indent=2)
 
 
