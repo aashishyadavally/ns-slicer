@@ -45,7 +45,10 @@ Currently, ``NS-Slicer`` works well on Ubuntu OS, and can be set up easily with 
 ### Directory Structure
 
 #### 1. Data Artifacts
-Navigate to ``ns-slicer/data/`` to find the dataset files (``{train|val|test}-examples.json``) -- use these files to benchmark learning-based static slicing approaches, or replicate results from the paper.
+Navigate to ``ns-slicer/data/`` to find:
+* the dataset files (``{train|val|test}-examples.json``) -- use these files to benchmark learning-based static slicing approaches, or replicate intrinsic evaluation results in the paper (Sections 6.1 - 6.3).
+* aliasing dataset files (``aliasing-{examples|dataloader}.pkl``) -- use these files to replicate variable aliasing experiment in the paper (Section 6.4).
+* vulnerability detection dataset file (``filtered-methods.json``) -- use this file to replicate extrinsic evaluation experiment in the paper (Section 6.5).
 
 #### 2. Model Artifacts
 Navigate to ``ns-slicer/models/`` to find the trained model weights with CodeBERT and GraphCodeBERT pre-trained language models -- use these files to replicate results from the paper, or to produce static program slices for custom Java programs.
