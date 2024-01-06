@@ -135,7 +135,8 @@ if __name__ == '__main__':
     ## Experiment arguments
     parser.add_argument("--model_key", default='microsoft/graphcodebert-base',
                         type=str, help="Model string.",
-                        choices=['microsoft/codebert-base', 'microsoft/graphcodebert-base', 'roberta-base'])
+                        choices=['microsoft/codebert-base', 'microsoft/graphcodebert-base',
+                                 'roberta-base'])
     parser.add_argument("--pretrain", action='store_true',
                         help='Use xBERT model off-the-shelf')
     parser.add_argument("--save_predictions", action='store_true',
