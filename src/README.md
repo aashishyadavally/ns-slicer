@@ -5,10 +5,15 @@
 * [Configuration](#configuration)
 * [Usage Instructions](#usage-instructions)
   - [For Experiments Replication](#for-experiments-replication)
+      1. [Intrinsic Evaluation on Complete Code, *Section 6.1*](#intrinsic-evaluation-on-complete-code) 
+      2. [Intrinsic Evaluation on Parial Code, *Section 6.2*](#intrinsic-evaluation-on-partial-code) 
+      3. [Ablation Study, *Section 6.3*](#ablation-study)
+      4. [Variable Aliasing, *Section 6.4*](#variable-aliasing) 
+      5. [Extrinsic Evaluation, *Section 6.5*](#extrinsic-evaluation) 
   - [For Custom Dataset](#for-custom-dataset)
   - [For Adding Pre-Trained Language Models](#for-adding-pre-trained-language-models)
 
-### Configuration
+## Configuration
 
 The main entry-point script is ``ns-slicer/src/run.py``. It has the following:
 
@@ -50,13 +55,12 @@ The main entry-point script is ``ns-slicer/src/run.py``. It has the following:
     | ``--num_train_epochs`` |  5       | Total number of training epochs to perform |
     | ``--seed``             |  42      | Random seed for initialization |
 
-### Usage Instructions
+## Usage Instructions
 
 Follow these instructions:
 
-#### For Experiments Replication
-
-1. For intrinsic evaluation on complete code (see Section 6.1 in paper)
+### For Experiments Replication
+#### Intrinsic evaluation on complete code
    * NS-Slicer with CodeBERT (*off-the-shelf*)
      - Training:
        ```bash
@@ -96,8 +100,8 @@ Follow these instructions:
        ```bash
        python run.py --data_dir ../data --output_dir ../models/graphcodebert-ft --load_model_path ../models/graphcodebert-ft/Epoch_4/model.ckpt --model_key microsoft/graphcodebert-base --do_eval
        ```
-   
-2. For intrinsic evaluation on partial code (NS-Slicer with GraphCodeBERT, see Section 6.2 in paper)
+
+#### Intrinsic evaluation on partial code
    * Omitting 5% of the statements at both start and end
        ```bash
        python run.py --data_dir ../data --output_dir ../models/graphcodebert-ft --load_model_path ../models/graphcodebert-ft/Epoch_4/model.ckpt --model_key microsoft/graphcodebert-base --do_eval_partial --pct 0.05
@@ -111,7 +115,7 @@ Follow these instructions:
        python run.py --data_dir ../data --output_dir ../models/graphcodebert-ft --load_model_path ../models/graphcodebert-ft/Epoch_4/model.ckpt --model_key microsoft/graphcodebert-base --do_eval_partial --pct 0.15
        ```
   
-3. Ablation study (see Section 6.3 in paper)
+#### Ablation study
    * NS-Slicer, *w/o* source code pre-training
       - Training:
        ```bash
@@ -142,7 +146,7 @@ Follow these instructions:
        python run.py --data_dir ../data --output_dir ../models/graphcodebert-max --load_model_path ../models/graphcodebert-max/Epoch_4/model.ckpt --model_key microsoft/graphcodebert-base --do_eval
        ```
 
-4. Variable aliasing (see Section 6.4 in paper)
+#### Variable aliasing
    * NS-Slicer with CodeBERT
       ```bash
        python run.py --data_dir ../data --output_dir ../models/codebert-ft --load_model_path ../models/codebert-ft/Epoch_4/model.ckpt --model_key microsoft/codebert-base --do_eval_aliasing
@@ -152,17 +156,17 @@ Follow these instructions:
        python run.py --data_dir ../data --output_dir ../models/graphcodebert-ft --load_model_path ../models/graphcodebert-ft/Epoch_4/model.ckpt --model_key microsoft/graphcodebert-base --do_eval_aliasing
        ```
 
-5. For extrsinsic evaluation (i.e., vulnerability detection, see Section 6.5 in paper)
+#### Extrinsic evaluation
    * NS-Slicer with GraphCodeBERT (*off-the-shelf*)
        ```bash
        python run.py --data_dir ../data --output_dir ../models/graphcodebert-pt --load_model_path ../models/graphcodebert-pt/Epoch_4/model.ckpt --model_key microsoft/graphcodebert-base --do_predict
        ```
    * NS-Slicer with GraphCodeBERT
        ```bash
-       python run.py --data_dir ../data --output_dir ../models/graphcodebert-pt --load_model_path ../models/graphcodebert-ft/Epoch_4/model.ckpt --model_key microsoft/graphcodebert-base --do_predict
+       python run.py --data_dir ../data --output_dir ../models/graphcodebert-ft --load_model_path ../models/graphcodebert-ft/Epoch_4/model.ckpt --model_key microsoft/graphcodebert-base --do_predict
        ```
 
-#### For Custom Dataset
+### For Custom Dataset
 To predict static backward and forward slices for a custom dataset, follow these instructions:
 
 1. First, create a JSON file with entries similar to ``{train|val|test}-examples.json`` and place in ``ns-slicer/data`` directory.
@@ -171,7 +175,7 @@ To predict static backward and forward slices for a custom dataset, follow these
 4. Create an ``torch.utils.data.DataLoader`` object by adding a ``make_dataloader_x`` function in ``ns-slicer/src/load.py`` (see ``process.make_dataloader_vuldetect`` for illustration).
 5. Replace ``VulDetectDataProcessor`` with ``XDataProcessor``, and ``make_dataloader_vuldetect`` with ``make_dataloader_x`` under the ``if args.do_predict:`` construct in ``ns-slicer/src/run.py``.
 
-#### For Adding Pre-Trained Language Models
+### For Adding Pre-Trained Language Models
 To plug other pre-trained language models into NS-Slicer framework:
 
 1. Currently, the only allowed choices for ``model_key`` program argument in ``ns-slicer/src/run.py`` are ``microsoft/codebert-base``, ``microsoft/graphcodebert-base``, and ``roberta-base``. Expand this list with additional pre-trained language models.
