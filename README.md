@@ -28,8 +28,8 @@ This section describes the preqrequisites, and contains instructions, to get the
 ``NS-Slicer`` requires a GPU to run *fast* and produce the results. On machines without a GPU, note that it can be notoriously slow.
 
 #### Project Environment
-Currently, ``NS-Slicer`` works well on Ubuntu OS, and can be set up easily with all the prerequisite packages by following these instructions (skip steps 1 - 3 if ``conda`` is already installed):
-  1. Download appropriate version of [conda](https://repo.anaconda.com/miniconda/) for your machine.
+Currently, ``NS-Slicer`` works well on Ubuntu OS, and can be set up easily with all the prerequisite packages by following these instructions (if ``conda`` is already installed, update to the latest version with ``conda update conda``, and skip steps 1 - 3):
+  1. Download the latest, appropriate version of [conda](https://repo.anaconda.com/miniconda/) for your machine (tested with ``conda 23.11.0``).
   2. Install  it by running the `conda_install.sh` file, with the command:
      ```bash
      $ bash conda_install.sh
@@ -43,6 +43,8 @@ Currently, ``NS-Slicer`` works well on Ubuntu OS, and can be set up easily with 
      ```bash
      $ conda env create -f environment.yml
      ```
+
+     To test successful installation, make sure ``autoslicer`` appears in the list of conda environments returned with ``conda env list``.
   5. Activate the virtual environment with the following command:
      
      ```bash
@@ -67,7 +69,17 @@ Navigate to ``ns-slicer/src/`` to find the source code for running experiments/u
 Navigate to ``ns-slicer/empirical-study/`` to find the details from the preliminary empirical study (see Section 3) in the paper.
 
 ### Usage Guide
-See [link](https://github.com/aashishyadavally/ns-slicer/tree/main/src/README.md) for details about replicating results in the paper, as well as using ``NS-Slicer`` to predict static program slices for Java programs.
+See [link](https://github.com/aashishyadavally/ns-slicer/tree/main/src/README.md) for details about replicating results in the paper, as well as using ``NS-Slicer`` to predict static program slices for Java programs. Here's an executive summary of the same:
+
+| Experiment                                        | Table # in Paper | Data Artifact(s)                             | Run Command(s)                                                        | Model Artifact(s) for Direct Inference |
+| ---                                               | :----:           | :---:                                        | :---:                                                                 | :---:                                  |
+| **(RQ1)** Intrinsic Evaluation on *Complete Code* | 1                | ``data/{train\|val\|test}-examples.json``    |  [click here](src/README.md/#intrinsic-evaluation-on-complete-code)   | [CodeBERT, rows 7-9](https://drive.google.com/drive/folders/1wxyL6pRESee4WSFMuX0EmCEsRYlxSwvD?usp=share_link)                 |
+|                                                   |                  |                                              |                                                                       | [GraphCodeBERT, rows 10-12](https://drive.google.com/drive/folders/1zq0NUt7WFXfu4Q5b3oLrHLq_iffv-r5M?usp=share_link)          |
+| **(RQ2)** Intrinsic Evaluation on *Partial Code*  | 2                | ``data/{train\|val\|test}-examples.json``    |  [click here](src/README.md/#intrinsic-evaluation-on-partial-code)    | [GraphCodeBERT](https://drive.google.com/drive/folders/1zq0NUt7WFXfu4Q5b3oLrHLq_iffv-r5M?usp=share_link)                      |
+| **(RQ3)** Ablation Study                          | 3                | ``data/{train\|val\|test}-examples.json``    |  [click here](src/README.md/#ablation-study)                          | -                                      |
+| **(RQ4)** Variable Aliasing                       | 4                | ``data/aliasing-{examples\|dataloader}.pkl`` |  [click here](src/README.md/#variable-aliasing/)                      | [CodeBERT, rows 1-2](https://drive.google.com/drive/folders/1wxyL6pRESee4WSFMuX0EmCEsRYlxSwvD?usp=share_link)                |
+|                                                   |                  |                                              |                                                                       | [GraphCodeBERT, rows 3-4](https://drive.google.com/drive/folders/1zq0NUt7WFXfu4Q5b3oLrHLq_iffv-r5M?usp=share_link)           |
+| **(RQ5)** Extrinsic Evaluation                    | 5                | ``data/filtered-methods.json``               |  [click here](src/README.md/#extrinsic-evaluation/)                   | [GraphCodeBERT, row 2](https://drive.google.com/drive/folders/1zq0NUt7WFXfu4Q5b3oLrHLq_iffv-r5M?usp=share_link)   |
 
 ## Contributing Guidelines
 There are no specific guidelines for contributing, apart from a few general guidelines we tried to follow, such as:
