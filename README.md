@@ -2,12 +2,6 @@
 
 NS-Slicer is a learning-based static program slicing tool, which extends such an analysis to partial Java programs. The source code, data, and model artifacts are publicly available on GitHub (https://github.com/aashishyadavally/ns-slicer), and Zenodo (https://zenodo.org/records/10463878).
 
-## Purpose
-**Submission for OOPSLA 2024 Artifact:**
-* **Available Badge:** We provide the artifact with a permanent DOI from Zenodo and also maintain a public GitHub repository for the project.
-* **Reusable Badge:** We describe how to reproduce the major results in the paper, and use the tool to slice Java programs.
-
-
 ## Table of Contents
 
 * [Getting Started](#getting-started)
